@@ -45,7 +45,7 @@ function Header() {
             </a>
         <div className="mr-3">
           {window.location.pathname !== "/" ? (
-            <a href="/landing" className="mr-2 login-logout">
+            <a href="/" className="mr-2 login-logout">
               Logout
             </a>
           ) : null}
