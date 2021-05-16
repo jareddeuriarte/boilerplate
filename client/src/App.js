@@ -14,8 +14,8 @@ function App() {
       <div>
         <Header />
         <Switch>
-          <Route exact path="/landing" component={Landing} />
-          <Route exact path="/" component={Dashboard} />
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/add" component={AddSnippet} />
         </Switch>
         <div className="d-flex justify-content-center">

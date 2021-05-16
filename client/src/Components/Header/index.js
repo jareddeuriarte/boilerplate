@@ -30,16 +30,16 @@ function Header() {
   return (
     <div className="header-wrapper d-flex justify-content-between container mt-3">
       <div className="d-flex">
-        <a id="heading" href="/landing">
+        <a id="heading" href="/dashboard">
           <h1 className="mr-1">boilerplate</h1>
         </a>
-        <a id="duck" href="/landing">
+        <a id="duck" href="/dashboard">
           <img src="../../images/rubber-duck.png" alt="rubber duck"></img>
         </a>
       </div>
       <div className="d-flex align-content-middle ">
         <div className="mr-3">
-          {window.location.pathname !== "/landing" ? (
+          {window.location.pathname !== "/" ? (
             <a href="/landing" className="mr-2 login-logout">
               Logout
             </a>

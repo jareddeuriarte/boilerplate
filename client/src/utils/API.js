@@ -9,6 +9,10 @@ export default {
     return axios.post("/api/gary/snippets", snippetData);
   },
 
+  getSnippets: function () {
+    return axios.get("/api/gary/snippets");
+  },
+
   // // Gets all books
   // getBooks: function() {
   //   return axios.get("/api/books");
