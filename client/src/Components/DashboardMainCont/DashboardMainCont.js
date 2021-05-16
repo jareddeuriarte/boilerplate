@@ -66,18 +66,28 @@ class MainContainer extends Component {
   };
   render() {
     return (
-      <div>
-        <input onChange={this.searchSnippets} type="text" />
-        <div id="main-container" className="col-10 m-2">
-          {this.state.results.map((snippet) => (
-            <SnippetCard
-              title={snippet.title}
-              code={snippet.code}
-              tag={snippet.tag}
-            />
-          ))}
+      <>
+        <div className="text-center">
+          <input
+            id="search"
+            className="mb-2"
+            placeholder="Search by Title"
+            onChange={this.searchSnippets}
+            type="text"
+          />
+          <div className="d-flex justify-content-center">
+            <div id="main-container" className="col-10 p-4 d-flex-column">
+              {this.state.results.map((snippet) => (
+                <SnippetCard
+                  title={snippet.title}
+                  code={snippet.code}
+                  tag={snippet.tag}
+                />
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 }
