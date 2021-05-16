@@ -56,7 +56,7 @@ class MainContainer extends Component {
       API.getSnippets().then((res) => {
         this.setState({
           results: res.data.filter((each) => {
-            return each.title.match(regex) || each.tag.match(regex);
+            return each.title.match(regex);
           }),
         });
       });
