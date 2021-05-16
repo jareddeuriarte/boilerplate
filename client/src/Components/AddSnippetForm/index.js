@@ -14,12 +14,18 @@ function AddSnippetForm() {
 
   function handleFormSubmit(event) {
     event.preventDefault();
-    console.log(formObject);
-    if (formObject.title && formObject.snippet && formObject.tags) {
+
+    let tagsArray = formObject.tags
+      .trim()
+      .replace(/\s/g, "")
+      .toUpperCase()
+      .split(",");
+
+    if (formObject.title && formObject.snippet && tagsArray) {
       API.addSnippet({
         title: formObject.title,
         code: formObject.snippet,
-        tag: formObject.tags,
+        tag: tagsArray,
       })
         .then((res) => {
           console.log("Yay we are here", res);
