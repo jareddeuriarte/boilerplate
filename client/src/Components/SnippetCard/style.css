@@ -41,6 +41,10 @@ span{
     padding:7px;
 }
 
+.code-block{
+    text-align: left;
+}
+
 /* on <pre> click, select all contents so the code is highlighted */
 .code-block :active {
     user-select: all;
