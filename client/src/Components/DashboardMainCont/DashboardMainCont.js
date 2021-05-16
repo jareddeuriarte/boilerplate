@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { Component, setState } from "react";
 import "./style.css";
 import SnippetCard from "../SnippetCard/index";
+import API from "../../utils/API";
 
 const codeSeed = [
   {
@@ -35,33 +36,50 @@ const codeSeed = [
   },
 ];
 
-function MainContainer() {
-  const [search, setSearch] = useState("");
-  const [results, setResults] = useState([]);
-  function searchSnippets(e) {
-    setSearch(e.target.value);
-    const regex = RegExp(search, "gi");
-    setResults(
-      codeSeed.filter((each) => {
-        return each.title.match(regex);
-      })
-    );
-    console.log(results);
+class MainContainer extends Component {
+  state = {
+    search: "",
+    results: [...codeSeed],
+  };
+
+  componentDidMount() {
+    API.getSnippets().then((res) => {
+      const response = res.data;
+      this.setState({ results: response });
+    });
   }
-  return (
-    <div>
-      <input onChange={searchSnippets} type="text" />
-      <div id="main-container" className="col-10 m-2">
-        {results.map((snippet) => (
-          <SnippetCard
-            title={snippet.title}
-            code={snippet.code}
-            tag={snippet.tag}
-          />
-        ))}
+
+  searchSnippets = (e) => {
+    this.setState({ search: e.target.value }, () => {
+      const regex = RegExp(this.state.search, "gi");
+      console.log(this.state.search);
+      API.getSnippets().then((res) => {
+        this.setState({
+          results: res.data.filter((each) => {
+            return each.title.match(regex) || each.tag.match(regex);
+          }),
+        });
+      });
+
+      console.log(this.state.results);
+    });
+  };
+  render() {
+    return (
+      <div>
+        <input onChange={this.searchSnippets} type="text" />
+        <div id="main-container" className="col-10 m-2">
+          {this.state.results.map((snippet) => (
+            <SnippetCard
+              title={snippet.title}
+              code={snippet.code}
+              tag={snippet.tag}
+            />
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default MainContainer;
