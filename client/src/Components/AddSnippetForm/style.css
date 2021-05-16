@@ -1,0 +1,16 @@
+.form-wrapper{
+    border-radius: 8px;
+    background-color: #C4D6B0;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    padding: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+textarea{
+    background-color: #291F1E;
+    font-family: 'Source Code Pro', monospace !important;
+    color: white;
+    font-size: small !important;
+}

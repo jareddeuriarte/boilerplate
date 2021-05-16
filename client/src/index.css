@@ -1,0 +1,31 @@
+* {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+html {
+  transition: all 2s;
+}
+
+#root {
+  transition: all 2s;
+}
+
+.dark-mode {
+  background-color: #1a1615;
+  color: #c4d6b0;
+}
+
+.snippetTitleDM {
+  color: red;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.code-block {
+  font-family: "Source Code Pro", monospace;
+  color: white;
+  font-size: small;
+}

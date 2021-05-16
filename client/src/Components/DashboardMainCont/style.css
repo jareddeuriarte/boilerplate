@@ -1,0 +1,7 @@
+#main-container {
+  border: solid black 2px;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
