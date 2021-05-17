@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
 import API from "../../utils/API";
+import { Redirect, Route, useHistory } from "react-router-dom";
+import Dashboard from "../../Pages/Dashboard";
 
 // Landing page background logic
+let numBalls = 50;
 function balls() {
   const colors = ["#C4D6B0", "#477998", "#291F1E", "#F64740", "#F85F36"];
-
-  const numBalls = 50;
-  const balls = [];
+  let movingBalls = [];
+  
   for (let i = 0; i < numBalls; i++) {
     let ball = document.createElement("div");
     ball.classList.add("ball");
@@ -18,12 +20,12 @@ function balls() {
     ball.style.width = `${Math.random()}em`;
     ball.style.height = ball.style.width;
 
-    balls.push(ball);
+    movingBalls.push(ball);
     document.body.append(ball);
   }
 
   // Keyframes
-  balls.forEach((el, i, ra) => {
+  movingBalls.forEach((el, i, ra) => {
     let to = {
       x: Math.random() * (i % 2 === 0 ? -11 : 11),
       y: Math.random() * 12,
@@ -54,6 +56,8 @@ function Landing() {
   const [password, setPassword] = useState([]);
   const [formObject, setFormObject] = useState({});
   const [user, setUser] = useState([]);
+  const [status, setStatus] = useState([""]);
+  const history = useHistory();
 
   function handleInputChange(event) {
     const { name, value } = event.target;
@@ -71,6 +75,11 @@ function Landing() {
       })
         .then((res) => {
           console.log("Yay we are here", res);
+        if (res.status === 200) { 
+          numBalls = 0;
+          history.push("/dashboard")
+        }
+
         })
         .catch((err) => console.log(err));
     }
