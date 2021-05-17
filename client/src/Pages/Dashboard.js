@@ -3,7 +3,6 @@ import Sidebar from "../Components/SideBar/Sidebar";
 import DashboardMainCont from "../Components/DashboardMainCont/DashboardMainCont";
 import ScrollToTop from "react-scroll-to-top";
 
-
 function Dashboard() {
 
   const [pickedCard, setPickedCard] = useState("");
