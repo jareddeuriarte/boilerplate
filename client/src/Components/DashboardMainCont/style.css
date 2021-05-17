@@ -1,5 +1,6 @@
 #main-container {
-  border: solid black 2px;
+  border: solid RGBA(71,121,152,0.46) 1px !important;
+  border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
 }
