@@ -1,8 +1,9 @@
 #main-container {
-  border: solid black 2px;
+  border: solid RGBA(71,121,152,0.46) 1px !important;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 7rem;
 }
 
 
