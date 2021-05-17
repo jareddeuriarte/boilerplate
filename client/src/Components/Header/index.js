@@ -27,6 +27,8 @@ function Header() {
     root.classList.toggle("dark-mode");
     html.classList.toggle("dark-mode");
   };
+
+
   return (
     <div className="header-wrapper d-flex justify-content-between container mt-3">
       <div className="d-flex">
@@ -42,6 +44,9 @@ function Header() {
         </a>
       </div>
       <div className="d-flex align-content-middle ">
+      <a href="/add" className="mr-2 add-snippet">
+              Add snippet
+            </a>
         <div className="mr-3">
           {window.location.pathname !== "/" ? (
             <a href="/" className="mr-2 login-logout">
