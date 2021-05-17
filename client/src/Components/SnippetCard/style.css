@@ -39,7 +39,9 @@
 
 span{
     padding:7px;
+    cursor: pointer;
 }
+
 
 .code-block{
     text-align: left;
