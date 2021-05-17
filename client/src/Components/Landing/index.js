@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
 import API from "../../utils/API";
-import { Redirect, Route, useHistory } from "react-router-dom";
-import Dashboard from "../../Pages/Dashboard";
+import { useHistory } from "react-router-dom";
+
 
 // Landing page background logic
-let numBalls = 50;
+
 function balls() {
   const colors = ["#C4D6B0", "#477998", "#291F1E", "#F64740", "#F85F36"];
   let movingBalls = [];
+  let numBalls = 50;
   
   for (let i = 0; i < numBalls; i++) {
     let ball = document.createElement("div");
@@ -46,11 +47,12 @@ function balls() {
     );
   });
 }
+
 //keeps balls from multiplying
 function Landing() {
   useEffect(() => {
     balls();
-  }, []);
+  }, []); 
 
   const [email, setEmail] = useState([]);
   const [password, setPassword] = useState([]);
@@ -76,8 +78,8 @@ function Landing() {
         .then((res) => {
           console.log("Yay we are here", res);
         if (res.status === 200) { 
-          numBalls = 0;
-          history.push("/dashboard")
+          window.location = "/dashboard"
+          
         }
 
         })
@@ -134,7 +136,7 @@ function Landing() {
                 <legend className="mb-1">Login</legend>
                 <div className="mb-3">
                   <input
-                    // onChange={handleInputChange}
+                    
                     type="email"
                     className="form-control input"
                     id="email"
@@ -144,7 +146,7 @@ function Landing() {
                 </div>
                 <div className="mb-3">
                   <input
-                    // onChange={handleInputChange}
+                    
                     type="password"
                     className="form-control input"
                     id="password"
@@ -152,14 +154,12 @@ function Landing() {
                     placeholder="password"
                   ></input>
                 </div>
-                <button
-                  // onClick={handleFormSubmit}
-                  type="submit"
+                  <a href="/dashboard"> 
+                  <button 
                   id="button"
-                  className="btn btn-primary"
-                >
+                  className="btn btn-primary">
                   Submit
-                </button>
+                </button></a>
               </form>
             </div>
           </div>
