@@ -6,7 +6,7 @@ function AddSnippet() {
   return (
     <div className="header-wrapper">
       <div className="d-flex justify-content-around container align-items-stretch">
-        <Sidebar2 title="Categories" />
+        {/* <Sidebar2 title="Categories" /> */}
         <AddPageMainCont />
       </div>
     </div>
