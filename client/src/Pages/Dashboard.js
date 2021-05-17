@@ -14,7 +14,7 @@ function Dashboard() {
     <div className="d-flex justify-content-around container align-items-stretch">
       <ScrollToTop smooth />
       <Sidebar
-        title="Most Used Boilerplates"
+        title="Tags"
         handleClick={handleSideCardClick}
       />
       <DashboardMainCont filterCard={pickedCard} />
