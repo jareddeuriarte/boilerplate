@@ -34,7 +34,11 @@ function Header() {
           <h1 className="mr-1">boilerplate</h1>
         </a>
         <a id="duck" href="/dashboard">
-          <img src="../../images/rubber-duck.png" alt="rubber duck"></img>
+          <img
+            id="duck"
+            src="../../images/rubber-duck.png"
+            alt="rubber duck"
+          ></img>
         </a>
       </div>
       <div className="d-flex align-content-middle ">
