@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import Landing from "./Components/Landing";
-// import SnippetCard from './Components/SnippetCard'
 import Header from "./Components/Header";
 import Dashboard from "./Pages/Dashboard";
 import AddSnippet from "./Pages/AddSnippet";
 import Footer from "./Components/Footer/Footer";
-
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
