@@ -5,6 +5,10 @@ export default {
     return axios.post("/api/users/signup", userData);
   },
 
+  loginUser: function (userData) {
+    return axios.post("/api/users/login", userData);
+  },
+
   addSnippet: function (snippetData) {
     return axios.post("/api/gary/snippets", snippetData);
   },
