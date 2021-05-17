@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+
 import "./style.css";
 
 function SnippetCard({ title, code, tag, img }) {
+
   return img ? (
     <div>
       <img id="clown" src={img}></img>
@@ -14,8 +16,8 @@ function SnippetCard({ title, code, tag, img }) {
       </pre>
       <div className="bottom-row">
         <div className="snippet-tags">tags: {tag}</div>
-        <span role="img" aria-label="heart-emoji">
-          💟
+        <span onClick={() => {navigator.clipboard.writeText(code)}} role="img" aria-label="clipboard">
+          📋
         </span>
       </div>
     </div>
