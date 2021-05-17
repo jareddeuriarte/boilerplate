@@ -3,12 +3,13 @@ import Sidebar from "../Components/SideBar/Sidebar";
 import DashboardMainCont from "../Components/DashboardMainCont/DashboardMainCont";
 import ScrollToTop from "react-scroll-to-top";
 
-
 function Dashboard() {
-
   const [pickedCard, setPickedCard] = useState("");
   const handleSideCardClick = (e) => {
     setPickedCard(e.target.innerText);
+  };
+  const handleAllClick = () => {
+    setPickedCard("");
   };
 
   return (
@@ -17,9 +18,9 @@ function Dashboard() {
       <Sidebar
         title="Most Used Boilerplates"
         handleClick={handleSideCardClick}
+        handleAll={handleAllClick}
       />
       <DashboardMainCont filterCard={pickedCard} />
-
     </div>
   );
 }

@@ -67,6 +67,14 @@ class MainContainer extends Component {
     });
   }
 
+  displayAll = () => {
+    API.getSnippets().then((res) => {
+      this.setState({
+        results: res,
+      });
+    });
+  };
+
   searchSnippets = (e) => {
     this.setState({ search: e.target.value }, () => {
       const regex = RegExp(this.state.search, "gi");

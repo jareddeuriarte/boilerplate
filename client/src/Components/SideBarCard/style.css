@@ -1,3 +1,10 @@
 #card-hover:hover {
   cursor: pointer;
 }
+
+#card-hover {
+}
+
+#card-hover:active {
+  transform: translateY(2px);
+}
