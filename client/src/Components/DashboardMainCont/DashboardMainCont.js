@@ -39,8 +39,26 @@ const codeSeed = [
 class MainContainer extends Component {
   state = {
     search: "",
-    results: [...codeSeed],
+    results: [],
+    card: this.props.filterCard,
   };
+
+  componentDidUpdate(card) {
+    if (this.state.card !== this.props.filterCard) {
+      this.setState({ card: this.props.filterCard }, () => {
+        const regex = RegExp(this.state.card, "gi");
+        API.getSnippets().then((res) => {
+          this.setState({
+            results: res.data.filter((each) => {
+              return each.title.match(regex);
+            }),
+          });
+        });
+
+        console.log(this.state.results);
+      });
+    }
+  }
 
   componentDidMount() {
     API.getSnippets().then((res) => {
@@ -77,13 +95,17 @@ class MainContainer extends Component {
           />
           <div className="d-flex justify-content-center">
             <div id="main-container" className="col-10 p-4 d-flex-column">
-              {this.state.results.map((snippet) => (
-                <SnippetCard
-                  title={snippet.title}
-                  code={snippet.code}
-                  tag={snippet.tag}
-                />
-              ))}
+              {this.state.results.length === 0 ? (
+                <SnippetCard title="sorry" img="../../../images/clown.png" />
+              ) : (
+                this.state.results.map((snippet) => (
+                  <SnippetCard
+                    title={snippet.title}
+                    code={snippet.code}
+                    tag={snippet.tag}
+                  />
+                ))
+              )}
             </div>
           </div>
         </div>

@@ -31,7 +31,7 @@ const Sidebar = (props) => {
     <div id="sidebar" className="col-2 m-2">
       <h5 className="h4 text-center font-weight-bold mt-3">{props.title}</h5>
       {titleArr.map((title) => {
-        return <SideBarCard title={title} />;
+        return <SideBarCard title={title} handleClick={props.handleClick} />;
       })}
     </div>
   );

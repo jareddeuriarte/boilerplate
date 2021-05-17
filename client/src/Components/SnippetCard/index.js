@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
 
-function SnippetCard({ title, code, tag }) {
-  return (
+function SnippetCard({ title, code, tag, img }) {
+  return img ? (
+    <div>
+      <img id="clown" src={img}></img>
+    </div>
+  ) : (
     <div className="card-wrapper m-3">
       <div className="snippet-title">{title}</div>
       <pre className="code-block">
