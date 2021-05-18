@@ -30,7 +30,7 @@ const Sidebar = (props) => {
   return (
     <div id="sidebar" className="col-2 m-2">
       <h5 className="h4 text-center font-weight-bold mt-3">{props.title}</h5>
-      <div onClick={props.handleAll} className="card mt-2 py-4" id="all-card">
+      <div onClick={props.handleAll} className="card mt-2" id="all-card">
         <div className="card-body  py-0">
           <h5 className="card-title mt-2 text-center h5 ">ALL</h5>
         </div>

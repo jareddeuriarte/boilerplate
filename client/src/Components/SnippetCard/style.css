@@ -37,24 +37,24 @@
   justify-content: space-between;
 }
 
-span{
-    padding:7px;
-    cursor: pointer;
+span {
+  padding: 7px;
+  cursor: pointer;
+  transition: all 0.1s;
 }
 
+span:active {
+  transform: rotate(360deg);
+}
 
-
-
-.code-block{
-    text-align: left;
+.code-block {
+  text-align: left;
 }
 
 /* on <pre> click, select all contents so the code is highlighted */
 .code-block :active {
-    user-select: all;
-  }
-
-
+  user-select: all;
+}
 
 #clown {
   width: 100%;

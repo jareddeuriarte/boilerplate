@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import Tooltip from '@material-ui/core/Tooltip';
+import Tooltip from "@material-ui/core/Tooltip";
 
 import "./style.css";
 
 function SnippetCard({ title, code, tag, img }) {
-
   return img ? (
     <div>
       <img id="clown" src={img}></img>
@@ -18,9 +17,15 @@ function SnippetCard({ title, code, tag, img }) {
       <div className="bottom-row">
         <div className="snippet-tags">tags: {tag}</div>
         <Tooltip title="copy snippet!" placement="top">
-        <span onClick={() => {navigator.clipboard.writeText(code)}} role="img" aria-label="clipboard">
-          📋
-        </span>
+          <span
+            onClick={() => {
+              navigator.clipboard.writeText(code);
+            }}
+            role="img"
+            aria-label="clipboard"
+          >
+            📋
+          </span>
         </Tooltip>
       </div>
     </div>
@@ -28,5 +33,3 @@ function SnippetCard({ title, code, tag, img }) {
 }
 
 export default SnippetCard;
-
-
