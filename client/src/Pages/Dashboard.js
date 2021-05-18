@@ -18,7 +18,7 @@ function Dashboard() {
     <div>
      {/* <div style={mystyle}> hi </div> */}
     <div className="d-flex justify-content-around container align-items-stretch">
-      <ScrollToTop smooth />
+      <ScrollToTop smooth color="#F64740" />
       <Sidebar
         title="Tags"
         handleClick={handleSideCardClick}
