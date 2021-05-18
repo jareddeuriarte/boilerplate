@@ -17,9 +17,12 @@ Boilerplate is a web developer's best friend, as it provides a single location t
 - [GitHub Repo](https://github.com/PeterMoDavis/boilerplate)
   
 
-![landing-page](images/landing-page-screenshot.png)
-![dashboard](images/dashboard-screenshot.png)
+
+
+![demo](images/demo.gif)
   
+
+
 
 ## Technologies
 - React
@@ -31,14 +34,13 @@ Boilerplate is a web developer's best friend, as it provides a single location t
 - react-scroll-to-top npm
 
 ### Credits  
-My tutor Namita.
+All the support that made this project possible. 
 
 ### License 
 This project is licensed under MIT.
 
 ### Contributing
 Forks are welcome!
-
 
 ### Badges
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
