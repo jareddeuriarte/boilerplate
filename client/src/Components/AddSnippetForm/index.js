@@ -32,11 +32,37 @@ function AddSnippetForm() {
         })
         .catch((err) => console.log(err));
     }
+    const form = document.querySelector("#snippet-form");
+    form.reset();
+    let title = document.querySelector("#code-title");
+    let code = document.querySelector("#snippet");
+    let tag = document.querySelector("#tag");
+    title.value = "✨YOU ENTERED A BOILERPLATE!✨";
+    code.value = "🦑 HOW GREAT!🦑 ";
+    tag.value = "🐘HOW WONDERFUL!🐘";
+
+    setTimeout(() => {
+      title.value = "";
+      code.value = "";
+      tag.value = "";
+      title.setAttribute(
+        "placeholder",
+        "Copy and paste your boilerplate here 🦆"
+      );
+      code.setAttribute(
+        "placeholder",
+        "Copy and paste your boilerplate here 🦆"
+      );
+      tag.setAttribute(
+        "placeholder",
+        "Copy and paste your boilerplate here 🦆"
+      );
+    }, 2000);
   }
   return (
-    <form onSubmit={handleFormSubmit}>
+    <form id="snippet-form" onSubmit={handleFormSubmit}>
       <div className="form-wrapper">
-        <form action=""></form>
+        <form id="snippet-form" action=""></form>
         <input
           name="title"
           onChange={handleInputChange}
