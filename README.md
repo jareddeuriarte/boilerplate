@@ -1,52 +1,61 @@
 # boilerplate
 ## Description
-Boilerplate is a web developer's best friend, as it provides a single location to access our most frequently implemented 'boilerplates'. Rather than rifling through Google and Stack Overflow each time you need to, for instance, grab the snippet that removes all styles from an  `<a>` tag, 
+Boilerplate is a web developer's best friend, as it provides a single location to access our most frequently used 'boilerplates'. Forget rifling through Google, Stack Overflow, documentation, blogs, endless bookmarks, etc. each time you need to, for instance, grab some snippet that removes all styles from an  `<a>` tag (guilty 🙋‍♂️). **Boilerplate** enables developers to add, store, and organize their go-to snippets, so we spend less time hunting code down and more time in development.
 
 ## Table of Contents
 - [Description](#Description)
 - [Deployment](#Deployment)
-- [Usage](#Usage)
-- [Features](#Features)
+- [Technologies](#Technologies)
 - [Credits](#Credits)
-- [Contributing](#Contributing)
 - [License](#License)
+- [Contributing](#Contributing)
+
   
 
 ## Deployment
-- [Heroku Deployment](https://frozen-shelf-11982.herokuapp.com)
-- [GitHub Repo](https://github.com/jareddeuriarte/workout-tracker)
+- [Heroku Deployment](https://boilerplate-petermodavis.herokuapp.com/)
+- [GitHub Repo](https://github.com/PeterMoDavis/boilerplate)
   
 
 ![landing-page](images/landing-page-screenshot.png)
 ![dashboard](images/dashboard-screenshot.png)
   
- 
-### Usage
-- 
 
-### Features
-- MongoDB technology
-- Node.js technology
-- npm exress
-- npm mongoose
+## Technologies
+- React
+- Express
+- MongoDB 
+- Node.js
+- Mongoose
+- Material-UI
+- react-scroll-to-top npm
 
- 
 ### Credits  
 My tutor Namita.
+
+### License 
+This project is licensed under MIT.
 
 ### Contributing
 Forks are welcome!
 
-### License 
-This project is licensed under MIT.
 
 ### Badges
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md)
 
   
-### Questions?
-Reach me at:
+### Creators
+Reach us at:
+
+Jared de Uriarte
 - [GitHub](https://github.com/jareddeuriarte)
 - deuriartejared@gmail.com
 
+Peter MoDavis
+- [GitHub](https://github.com/PeterMoDavis)
+- pmodavis.webdev@gmail.com
+
+Nick Pendergast
+- [GitHub](https://github.com/NBP77)
+- nbp77@outlook.com
