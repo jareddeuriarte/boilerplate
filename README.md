@@ -1,6 +1,6 @@
 # boilerplate
 ## Description
-Boilerplate is a web developer's best friend, as it provides a single location to access our most frequently implemented 'boilerplates'. Rather 
+Boilerplate is a web developer's best friend, as it provides a single location to access our most frequently implemented 'boilerplates'. Rather than rifling through Google and Stack Overflow each time you need to, for instance, grab the snippet that removes all styles from an  `<a>` tag, 
 
 ## Table of Contents
 - [Description](#Description)
