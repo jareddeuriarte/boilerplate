@@ -110,7 +110,7 @@ class MainContainer extends Component {
                   <SnippetCard
                     title={snippet.title}
                     code={snippet.code}
-                    tag={snippet.tag}
+                    tag={snippet.tag.join(", ")}
                   />
                 ))
               )}
