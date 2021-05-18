@@ -21,11 +21,15 @@ function Header() {
     setDark(!dark);
     root.classList.toggle("dark-mode");
     html.classList.toggle("dark-mode");
+    const button = document.querySelector(".add-button");
+    button.classList.toggle("pre-button");
   };
 
   const darkMode2 = () => {
     root.classList.toggle("dark-mode");
     html.classList.toggle("dark-mode");
+    const button = document.querySelector(".add-button");
+    button.classList.toggle("pre-button");
   };
 
   return (
@@ -45,7 +49,7 @@ function Header() {
       <div className="d-flex align-items-center mt-4">
         {window.location.pathname !== "/" ? (
           <a href="/add" className="mr-2 add-snippet">
-            Add snippet
+            <button className="add-button">ADD BOILERPLATE</button>
           </a>
         ) : null}
 

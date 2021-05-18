@@ -1,5 +1,5 @@
 #sidebar {
-  border: solid RGBA(71,121,152,0.46) 1px !important;
+  border: solid RGBA(71, 121, 152, 0.46) 1px !important;
   border-radius: 10px;
   min-height: 80vh;
 }
@@ -8,6 +8,7 @@
   background-color: #477998;
   color: white;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 #all-card:active {
