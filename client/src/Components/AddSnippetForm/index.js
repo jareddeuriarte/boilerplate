@@ -45,17 +45,14 @@ function AddSnippetForm() {
       title.value = "";
       code.value = "";
       tag.value = "";
-      title.setAttribute(
-        "placeholder",
-        "Copy and paste your boilerplate here 🦆"
-      );
+      title.setAttribute("placeholder", "boilerplate title");
       code.setAttribute(
         "placeholder",
         "Copy and paste your boilerplate here 🦆"
       );
       tag.setAttribute(
         "placeholder",
-        "Copy and paste your boilerplate here 🦆"
+        "tags (comma seperated), e.g. html, react, MySQL"
       );
     }, 2000);
   }
