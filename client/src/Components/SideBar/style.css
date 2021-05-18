@@ -3,3 +3,13 @@
   border-radius: 10px;
   min-height: 80vh;
 }
+
+#all-card {
+  background-color: #477998;
+  color: white;
+  cursor: pointer;
+}
+
+#all-card:active {
+  transform: translateY(2px);
+}

@@ -10,6 +10,9 @@ function Dashboard() {
   const handleSideCardClick = (e) => {
     setPickedCard(e.target.innerText);
   };
+  const handleAllClick = () => {
+    setPickedCard("");
+  };
 
   return (
     <div>
@@ -19,9 +22,12 @@ function Dashboard() {
       <Sidebar
         title="Tags"
         handleClick={handleSideCardClick}
+        handleAll={handleAllClick}
       />
       <DashboardMainCont filterCard={pickedCard} />
+
       </div>
+
 
     </div>
     
