@@ -21,15 +21,11 @@ function Header() {
     setDark(!dark);
     root.classList.toggle("dark-mode");
     html.classList.toggle("dark-mode");
-    const button = document.querySelector(".add-button");
-    button.classList.toggle("pre-button");
   };
 
   const darkMode2 = () => {
     root.classList.toggle("dark-mode");
     html.classList.toggle("dark-mode");
-    const button = document.querySelector(".add-button");
-    button.classList.toggle("pre-button");
   };
 
   return (
