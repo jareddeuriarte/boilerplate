@@ -27,9 +27,9 @@ const Footer = (props) => {
           © 2021 Pendergast, de Uriarte, & MoDavis All Rights Reserved
         </small>
       </div>
-      <div className="text-center">
-        -------- <i className="fas fa-kiwi-bird border-bottom pb-1"></i>{" "}
-        --------
+      <div className="text-center ">
+        <small> -------- in other news
+        --------</small>
       </div>
       <div className="text-center beast mt-1">
         <small>-bigfoot sighting: {beastSighting}-</small>

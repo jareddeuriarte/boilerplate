@@ -4,3 +4,8 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+
+input{
+  padding: 8px;
+}
