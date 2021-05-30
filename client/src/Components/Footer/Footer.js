@@ -20,7 +20,7 @@ const Footer = (props) => {
 
   return (
     <div className="d-flex-column justify-content-center mb-3 mt-2">
-      <div className="text-center border-bottom">Boilerplate</div>
+      <div className="text-center border-bottom">boilerplate</div>
 
       <div className="text-center">
         <small>

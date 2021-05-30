@@ -90,7 +90,7 @@ function Landing() {
   return (
     <div className="wrapper">
       <div>
-        <h1 className="title">Boilerplate</h1>
+        <h1 className="title">boilerplate</h1>
         <div className="d-flex justify-content-between">
           <div>
             <div>

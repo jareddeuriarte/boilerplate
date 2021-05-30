@@ -45,7 +45,7 @@ function Header() {
       <div className="d-flex align-items-center mt-4">
         {window.location.pathname !== "/" ? (
           <a href="/add" className="mr-2 add-snippet">
-            <button className="add-button">ADD BOILERPLATE</button>
+            Add boilerplate
           </a>
         ) : null}
 
